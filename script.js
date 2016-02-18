@@ -38,10 +38,10 @@ var charUp;
 var finalTree = function(myTree) {
   userHeight2 = tree.height - 1;  //<-- Amount of spaces to add in first line
   charUp = 1; //<-- Amount of times to repeat the charString in the first line
-  for (i = 0; i <= tree.height; i++) {
+  for (i = 0; i < tree.height; i++) {
     console.log(space.repeat(userHeight2) + tree.char.repeat(charUp)); // 1st Line
     userHeight2--; // <-- Decrements the spaces by one each iteration
-    charUp = charUp + 2; // <Increments the characterts by two each iteration
+    charUp = charUp + 2; // <-- Increments the characterts by two each iteration
   }
 }
 
