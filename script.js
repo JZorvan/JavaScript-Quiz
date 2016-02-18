@@ -11,21 +11,33 @@ console.log("button", button);
 
 // Button Click Function
 button.addEventListener("click", function(event) {
-  console.log("I clicked.");
+
   // Gets the user's character and assigns to variable
   userChar = document.getElementById("userChar").value;
-  console.log("userChar", userChar);
+
+  // Checks to see if the Character Field is blank and returns an alert
+  if (userChar === "") {
+    alert("Please enter a desired character for your tree.");
+  }  
+  
   // Gets the user's height and assigns to variable after changing to a #
   userHeight = document.getElementById("userHeight").value;
+
+  // Checks to see if the Height Field is blank and returns an alert
+  if (userHeight === "") {
+    alert("Please enter a desired height for your tree.")
+  }
+
+  //Turns the height string into a numeric value
   userHeight = parseInt(userHeight);
-  console.log("userHeight", userHeight);
+
   // Assigns those variable to the object
   tree = {
   char: userChar,
   height: userHeight
   }
-  // Yay, good job it all works so far
-  console.log("", tree);
+  
+  // Calls Tree Function
   finalTree(tree)
 });
 
