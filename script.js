@@ -29,23 +29,20 @@ button.addEventListener("click", function(event) {
   finalTree(tree)
 });
 
-//  CAUTION: CRIME SCENE - DO NOT CROSS
+//  TREE MAKING FUNCTION
 
-var treeString;
-var space = " "
-
-// n + (n - 1)
-
-// var finalTree = function() {
-// for (i = 0; i <= tree.height; i++) {
-//   var stringHolder = tree.char.repeat(i) + tree.char.repeat(i) + "\n";
-//   stringHolder = stringHolder.substr(1);
-
-//   }
-//   console.log(stringHolder);
-// }
-
+var charString;
+var space = " ";
+var userHeight2;  
+var charUp; 
 var finalTree = function(myTree) {
-console.log("myTree", myTree);
+  userHeight2 = tree.height - 1;  //<-- Amount of spaces to add in first line
+  charUp = 1; //<-- Amount of times to repeat the charString in the first line
+  for (i = 0; i <= tree.height; i++) {
+    console.log(space.repeat(userHeight2) + tree.char.repeat(charUp)); // 1st Line
+    userHeight2--; // <-- Decrements the spaces by one each iteration
+    charUp = charUp + 2; // <Increments the characterts by two each iteration
+  }
+}
 
 
